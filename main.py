@@ -33,7 +33,7 @@ resource_fields = {
 class HelloWorld(Resource):
     @marshal_with(resource_fields)
     def get(self):
-        r = requests.get('https://8f0102d00977.ngrok.io/jsonFiles/additif.json')
+        r = requests.get('https://7aaf70ba6534.ngrok.io/jsonFiles/additif.json')
         result = r.json()
         q= [i['numero'] for i in result] 
         peter = tableofadd.query.filter(tableofadd.numero.in_(q)).all()
